@@ -18,22 +18,6 @@ Janus Web Shell is a powerful, feature-rich PHP-based web shell designed for sys
 - **Responsive Design**: Modern, dark-themed UI with CodeMirror integration for code editing.
 - **Cross-Platform Support**: Compatible with Linux, BSD, and other UNIX-like systems (limited Windows support).
 
-## Installation
-
-1. **Upload the Script**:
-   - Copy the `janus.php` file to your web server.
-   - Ensure the file has appropriate permissions (e.g., `chmod 600 janus.php` for security).
-
-2. **Access the Shell**:
-   - Open your browser and navigate to the URL where `janus.php` is hosted (e.g., `http://your-server.com/janus.php`).
-   - The shell will initialize and display the dashboard.
-
-3. **Optional Configuration**:
-   - Modify the `MAX_EXECUTION_TIME` constant in the PHP script to adjust the maximum script execution time (default: unlimited).
-   - Ensure the PHP `ZipArchive` extension is enabled for zip/unzip functionality.
-
-## Usage
-
 ### Dashboard
 - Displays system information (OS, hostname, IP, PHP version, etc.).
 - Shows real-time CPU, RAM, and disk usage with progress bars.
