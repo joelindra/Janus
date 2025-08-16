@@ -68,7 +68,6 @@ Janus Web Shell is a powerful, feature-rich PHP-based web shell designed for sys
 - **File Permissions**: Restrict access to the script (e.g., use `.htaccess` or server authentication).
 - **Self-Destruct**: Use the self-destruct feature to remove the shell when no longer needed.
 - **Disabled Functions**: The shell checks for disabled PHP functions and gracefully handles restrictions.
-- **Secure Deployment**: Deploy on HTTPS servers to prevent interception of sensitive data.
 
 ## Requirements
 
