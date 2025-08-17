@@ -1,4 +1,4 @@
-# Janus Shell v4.0 - Advanced PHP Web Shell - No Logger!
+# Janus Shell v4.0 - Advanced PHP Web Shell - Anti Logger!
 
 ![Version](https://img.shields.io/badge/version-4.0-blue)
 ![PHP](https://img.shields.io/badge/PHP-7.0%2B-green)
