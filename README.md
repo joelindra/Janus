@@ -1,56 +1,107 @@
-<xaiArtifact artifact_id="287761b6-750d-4d6e-9d37-62e7db248c64" artifact_version_id="ae71304a-003c-49bb-92f3-a76fd7958104" title="README.md" contentType="text/markdown">
+# Janus Shell v4.0 - Advanced PHP Web Shell
 
-# Janus Shell v3.0
+![Version](https://img.shields.io/badge/version-4.0-blue)
+![PHP](https://img.shields.io/badge/PHP-7.0%2B-green)
+![License](https://img.shields.io/badge/license-MIT-red)
 
-Janus Shell is a PHP-based web shell designed for system administration and security testing. It provides a feature-rich interface for managing files, executing commands, interacting with databases, scanning networks, and more, all from a web browser. This tool is intended for **authorized use only** on systems where you have explicit permission to perform such activities. Unauthorized use may be illegal and unethical.
+Janus Shell is a sophisticated PHP web shell designed for authorized security testing, system administration, and educational purposes. It provides a comprehensive set of tools for file management, system exploration, network operations, and post-exploitation tasks.
 
 <img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
 
+## ⚠️ Important Notice
+
+**This tool is intended for authorized use only. Unauthorized access to computer systems is illegal. Use only on systems you own or have explicit permission to test. The developers are not responsible for any misuse or illegal activities conducted with this tool.**
+
 ## Features
 
-- **Dashboard**: Displays system information (OS, PHP version, user, etc.) and live system stats (CPU, RAM, disk usage).
-- **File Manager**: Browse, upload, download, create, rename, delete, and change permissions for files and directories. Supports ZIP creation and extraction.
-- **Terminal**: Execute system commands with a terminal-like interface, including command history and directory navigation.
-- **Database Client**: Run MySQL queries with a simple interface to view results or perform database operations.
-- **Connect**: Establish reverse or bind shells for remote command execution (requires compatible server configuration).
-- **Process List**: View running processes with the ability to refresh the list.
-- **Network Tools**: Perform port scanning and view network interface and connection details.
-- **PHP Code Evaluator**: Execute arbitrary PHP code (if `eval` is enabled on the server).
-- **Mass Uploader**: Upload a single file to multiple directories simultaneously.
-- **Enumeration**: Scan for SUID/GUID files, enumerate users and groups, and retrieve OS/kernel information for security assessments.
-- **Cronjob Manager**: View and edit the current user's crontab for scheduling tasks.
-- **Tools**: Download files via `wget`, view PHP configuration (`phpinfo`), and a self-destruct option to remove the shell.
+### Core Functionality
+- **File Manager**: Browse, upload, download, edit, delete, and modify file permissions
+- **Terminal**: Execute shell commands with history navigation
+- **Database Client**: MySQLi interface for database operations
+- **System Information**: Comprehensive system details and live resource monitoring
 
-## Usage
+### Network Tools
+- **Port Scanner**: Identify open ports on target systems
+- **Reverse/Bind Shells**: Establish remote connections
+- **Port Forwarding**: Pivot through compromised systems
+- **Mass Uploader**: Distribute files to multiple directories
 
-1. **Dashboard**: View system stats and information upon loading the shell.
-2. **File Manager**: Navigate directories, upload files, or edit files using the built-in CodeMirror editor.
-3. **Terminal**: Run commands like `ls`, `cat`, or `cd` to interact with the server’s file system.
-4. **Database**: Input MySQL credentials and run queries to manage databases.
-5. **Connect**: Set up reverse or bind shells for advanced remote access.
-6. **Network Tools**: Scan ports or view network configurations.
-7. **Security Enumeration**: Use tools to find SUID/GUID files, list users/groups, or check kernel details.
-8. **Cron Manager**: Edit crontabs to schedule tasks.
-9. **Self-Destruct**: Permanently delete the shell from the server when done (use with caution).
+### Security & Enumeration
+- **Privilege Escalation**: SUID/GUID discovery, sudo permissions check
+- **User/Group Enumeration**: System user and group analysis
+- **Kernel Information**: OS version and exploit suggestions
+- **Credential Harvesting**: Search for credentials and API keys
+- **Config File Discovery**: Locate common configuration files
+
+### Post-Exploitation
+- **Persistence Methods**: SSH key management, .htaccess backdoors
+- **Log Cleaning**: Remove traces from log files
+- **Code Injection**: Backdoor existing files
+- **Cron Manager**: Schedule tasks for persistence
+
+### Additional Tools
+- **PHP Code Evaluator**: Execute arbitrary PHP code
+- **File Search**: Find files by name or content
+- **Timestomp**: Modify file timestamps
+- **Self-Destruct**: Remove the shell after use
 
 ## Requirements
 
-- PHP 5.6 or higher
-- Web server (e.g., Apache, Nginx)
-- Optional PHP extensions: `mysqli`, `zip`
-- Read/write/execute permissions for certain features
-- Compatible OS for system commands (Linux, Unix, or Windows)
+- PHP 7.0 or higher
+- Common PHP extensions (mysqli, sockets, zip, etc.)
+- Web server (Apache, Nginx, etc.)
+- Browser with JavaScript support
+
+## Usage
+
+### Basic Navigation
+- Use the sidebar to switch between different tool categories
+- Each section provides an intuitive interface for its specific functions
+- Most operations provide feedback through toast notifications
+
+### File Management
+- Navigate directories by clicking on folder names
+- Upload files using the "Upload" button
+- Edit files by clicking on their names
+- Change permissions with the 🔒 icon
+- Delete files/folders with the 🗑️ icon
+
+### Terminal
+- Type commands directly into the terminal input
+- Use arrow keys to navigate command history
+- The terminal maintains your current working directory
+
+### Database Operations
+1. Enter database connection details (host, user, password, database name)
+2. Write your SQL query in the text area
+3. Click "Execute Query" to run the query
+4. Results will be displayed in a formatted table
+
+### Security Testing
+- Use the "Enumeration" section to gather system information
+- Check for privilege escalation opportunities
+- Harvest credentials from configuration files
+- Establish persistence for continued access
+
+## Security Considerations
+
+- **Authentication**: The shell has no built-in authentication. Secure the file location.
+- **Encryption**: All communications are base64 encoded but not encrypted. Use over HTTPS.
+- **Detection**: This shell may be detected by security software. Use responsibly.
+- **Cleanup**: Use the log cleaner and self-destruct features to minimize traces.
 
 ## Screenshots
 
-<img width="1626" height="899" alt="image" src="https://github.com/user-attachments/assets/9eb009ee-9579-4395-9620-a186b5e2adf1" />
-<img width="1301" height="829" alt="image" src="https://github.com/user-attachments/assets/c293e529-49d6-458c-ad7c-60cd50d58b96" />
-<img width="1143" height="792" alt="image" src="https://github.com/user-attachments/assets/23bf9897-8e54-4489-87e2-04c56428b228" />
+<img width="1675" height="867" alt="image" src="https://github.com/user-attachments/assets/fe6e4870-bada-4b40-9a89-8e2a380d8076" />
+<img width="1675" height="867" alt="image" src="https://github.com/user-attachments/assets/d8ddab8d-aeae-40f7-8019-e2ba3ac5580a" />
+<img width="1361" height="905" alt="image" src="https://github.com/user-attachments/assets/4dcba90c-4f80-430b-a885-0ec0ed0ac502" />
 
-## Credits
+## Disclaimer
 
-Created by [Anonre](https://github.com/joelindra). Built with modern web technologies, including CodeMirror for code editing and a responsive interface for ease of use.
+This tool is provided for educational and authorized security testing purposes only. Unauthorized use of this tool to access systems without permission is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this tool. By using this software, you agree to use it responsibly and in compliance with all applicable laws.
 
-**Disclaimer**: The author is not responsible for any misuse of this tool. Always obtain proper authorization before deploying or using Janus Shell on any system.
+## License
 
-</xaiArtifact>
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Remember: With great power comes great responsibility. The developers are not responsible for any misuse or illegal activities conducted with this tool.**
