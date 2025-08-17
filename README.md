@@ -1,4 +1,4 @@
-# Janus Shell v4.0 - Advanced PHP Web Shell
+# Janus Shell v4.0 - Advanced PHP Web Shell - No Logger!
 
 ![Version](https://img.shields.io/badge/version-4.0-blue)
 ![PHP](https://img.shields.io/badge/PHP-7.0%2B-green)
@@ -82,13 +82,6 @@ Janus Shell is a sophisticated PHP web shell designed for authorized security te
 - Check for privilege escalation opportunities
 - Harvest credentials from configuration files
 - Establish persistence for continued access
-
-## Security Considerations
-
-- **Authentication**: The shell has no built-in authentication. Secure the file location.
-- **Encryption**: All communications are base64 encoded but not encrypted. Use over HTTPS.
-- **Detection**: This shell may be detected by security software. Use responsibly.
-- **Cleanup**: Use the log cleaner and self-destruct features to minimize traces.
 
 ## Screenshots
 
