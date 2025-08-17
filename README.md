@@ -1,62 +1,56 @@
-# Janus Shell v2.0 - Anti Logger
+<xaiArtifact artifact_id="287761b6-750d-4d6e-9d37-62e7db248c64" artifact_version_id="ae71304a-003c-49bb-92f3-a76fd7958104" title="README.md" contentType="text/markdown">
+
+# Janus Shell v3.0
+
+Janus Shell is a PHP-based web shell designed for system administration and security testing. It provides a feature-rich interface for managing files, executing commands, interacting with databases, scanning networks, and more, all from a web browser. This tool is intended for **authorized use only** on systems where you have explicit permission to perform such activities. Unauthorized use may be illegal and unethical.
 
 <img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
------
 
-Janus Shell is a powerful, feature-rich PHP web shell with a modern, responsive user interface. It is designed for penetration testers and security professionals for authorized remote server administration and post-exploitation. It provides a comprehensive suite of tools within a single PHP file, making it easy to deploy and manage.
+## Features
 
-## ✨ Features
+- **Dashboard**: Displays system information (OS, PHP version, user, etc.) and live system stats (CPU, RAM, disk usage).
+- **File Manager**: Browse, upload, download, create, rename, delete, and change permissions for files and directories. Supports ZIP creation and extraction.
+- **Terminal**: Execute system commands with a terminal-like interface, including command history and directory navigation.
+- **Database Client**: Run MySQL queries with a simple interface to view results or perform database operations.
+- **Connect**: Establish reverse or bind shells for remote command execution (requires compatible server configuration).
+- **Process List**: View running processes with the ability to refresh the list.
+- **Network Tools**: Perform port scanning and view network interface and connection details.
+- **PHP Code Evaluator**: Execute arbitrary PHP code (if `eval` is enabled on the server).
+- **Mass Uploader**: Upload a single file to multiple directories simultaneously.
+- **Enumeration**: Scan for SUID/GUID files, enumerate users and groups, and retrieve OS/kernel information for security assessments.
+- **Cronjob Manager**: View and edit the current user's crontab for scheduling tasks.
+- **Tools**: Download files via `wget`, view PHP configuration (`phpinfo`), and a self-destruct option to remove the shell.
 
-Janus Shell is packed with features to provide complete control over a web server environment.
+## Usage
 
-### **Core Interface**
+1. **Dashboard**: View system stats and information upon loading the shell.
+2. **File Manager**: Navigate directories, upload files, or edit files using the built-in CodeMirror editor.
+3. **Terminal**: Run commands like `ls`, `cat`, or `cd` to interact with the server’s file system.
+4. **Database**: Input MySQL credentials and run queries to manage databases.
+5. **Connect**: Set up reverse or bind shells for advanced remote access.
+6. **Network Tools**: Scan ports or view network configurations.
+7. **Security Enumeration**: Use tools to find SUID/GUID files, list users/groups, or check kernel details.
+8. **Cron Manager**: Edit crontabs to schedule tasks.
+9. **Self-Destruct**: Permanently delete the shell from the server when done (use with caution).
 
-  * **Modern UI:** A clean, dark-themed, and responsive single-page application (SPA) interface built for usability.
-  * **Live Dashboard:** Get real-time statistics for CPU, RAM, and Disk usage.
-  * **System Information:** Detailed information about the server OS, PHP version, user, IP addresses, and disabled PHP functions.
-  * **Mobile Friendly:** The interface is fully responsive and usable on mobile devices.
+## Requirements
 
-### **File Management**
-
-  * **AJAX-driven File Manager:** Browse directories, view file details, and navigate the filesystem without page reloads.
-  * **Full CRUD Operations:** Create, Delete, Rename files and directories.
-  * **Advanced File Editor:** An in-browser editor powered by **CodeMirror** with syntax highlighting for various languages.
-  * **File Upload/Download:** Easily upload multiple files directly to the current directory or download files from the server.
-  * **Mass Uploader:** Upload a single file to multiple selected directories at once using a directory tree browser.
-  * **Permissions Management:** View permissions in both octal (`0755`) and symbolic (`drwxr-xr-x`) formats. Change file permissions directly.
-  * **Archiving:** Create ZIP archives from files/directories and extract ZIP archives on the server.
-
-### **Execution & Control**
-
-  * **Interactive Terminal:** A pseudo-terminal for executing shell commands, with command history support.
-  * **PHP Code Evaluator:** Run PHP code on the fly and see the output immediately.
-  * **Process Manager:** View a list of all running processes on the server (`ps aux`).
-
-### **Networking & Security**
-
-  * **Back Connect / Reverse Shell:** Easily establish a reverse shell connection to a listener for deeper interaction.
-  * **Port Scanner:** A simple TCP port scanner to probe for open ports on a given host.
-  * **Network Information:** View network interface details (`ip addr`/`ifconfig`) and active connections (`netstat`).
-  * **SUID/GUID Scanner:** A security auditing tool to find files with potentially exploitable SUID/GUID permissions for privilege escalation reconnaissance.
-  * **Wget (Downloader):** Fetch files from any URL and save them directly to the server.
-
-### **Database Management**
-
-  * **MySQLi Client:** Connect to a MySQL/MariaDB database and execute SQL queries directly from the shell. View results in a clean, tabulated format.
-
-### **Stealth & Evasion**
-
-  * **Base64 Communication:** All communication between the client and server is Base64 encoded to obscure traffic from basic inspection.
-  * **Self-Destruct:** A one-click function to completely remove the shell script from the server.
------
+- PHP 5.6 or higher
+- Web server (e.g., Apache, Nginx)
+- Optional PHP extensions: `mysqli`, `zip`
+- Read/write/execute permissions for certain features
+- Compatible OS for system commands (Linux, Unix, or Windows)
 
 ## Screenshots
 
-<img width="1556" height="789" alt="image" src="https://github.com/user-attachments/assets/77da6b6b-92da-4956-a78b-c9356458aec4" />
-<img width="1901" height="796" alt="image" src="https://github.com/user-attachments/assets/89e95beb-aca3-4e19-b4fa-ed6a33e47b9c" />
+<img width="1626" height="899" alt="image" src="https://github.com/user-attachments/assets/9eb009ee-9579-4395-9620-a186b5e2adf1" />
+<img width="1301" height="829" alt="image" src="https://github.com/user-attachments/assets/c293e529-49d6-458c-ad7c-60cd50d58b96" />
+<img width="1143" height="792" alt="image" src="https://github.com/user-attachments/assets/23bf9897-8e54-4489-87e2-04c56428b228" />
 
-## 📄 License
+## Credits
 
-This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+Created by [Anonre](https://github.com/joelindra). Built with modern web technologies, including CodeMirror for code editing and a responsive interface for ease of use.
 
-**Author:** Anonre / [joelindra](https://github.com/joelindra)
+**Disclaimer**: The author is not responsible for any misuse of this tool. Always obtain proper authorization before deploying or using Janus Shell on any system.
+
+</xaiArtifact>
