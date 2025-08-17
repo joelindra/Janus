@@ -1,89 +1,62 @@
-![Janus Shell Interface](https://img.shields.io/badge/Version-1.0--Stealth-blue.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-Janus Web Shell is a powerful, feature-rich PHP-based web shell designed for system administration, file management, and server monitoring. It provides a modern, user-friendly interface for interacting with server resources, executing commands, and performing security audits. **Use this tool responsibly and only on systems where you have explicit permission.**
+# Janus Shell v2.0
 
 <img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
+-----
 
-## Features
+Janus Shell is a powerful, feature-rich PHP web shell with a modern, responsive user interface. It is designed for penetration testers and security professionals for authorized remote server administration and post-exploitation. It provides a comprehensive suite of tools within a single PHP file, making it easy to deploy and manage.
 
-- **File Management**: Browse, edit, upload, download, zip/unzip, create, rename, delete, and change permissions of files and directories.
-- **Terminal Emulator**: Execute shell commands directly from the browser with a fully interactive terminal interface.
-- **System Monitoring**: View real-time CPU, RAM, and disk usage with a sleek dashboard.
-- **Network Tools**: Perform port scanning and retrieve network interface and connection information.
-- **PHP Code Evaluation**: Safely execute PHP code with output displayed in real-time.
-- **Mass File Uploader**: Upload a single file to multiple directories efficiently.
-- **Security Auditing**: Scan for SUID/GUID files and retrieve detailed network information.
-- **Self-Destruct Mechanism**: Securely delete the shell from the server when needed.
-- **Responsive Design**: Modern, dark-themed UI with CodeMirror integration for code editing.
-- **Cross-Platform Support**: Compatible with Linux, BSD, and other UNIX-like systems (limited Windows support).
+## ✨ Features
 
-### Dashboard
-- Displays system information (OS, hostname, IP, PHP version, etc.).
-- Shows real-time CPU, RAM, and disk usage with progress bars.
+Janus Shell is packed with features to provide complete control over a web server environment.
 
-### File Manager
-- Navigate directories, view file details (size, permissions, modification time).
-- Perform actions like creating files/directories, uploading, downloading, zipping, unzipping, renaming, deleting, and changing permissions.
-- Edit text files with a built-in CodeMirror editor or view media files (images/videos).
+### **Core Interface**
 
-### Terminal
-- Execute shell commands with real-time output.
-- Supports `cd` for directory navigation and updates the file manager context accordingly.
-- Command history with arrow key navigation.
+  * **Modern UI:** A clean, dark-themed, and responsive single-page application (SPA) interface built for usability.
+  * **Live Dashboard:** Get real-time statistics for CPU, RAM, and Disk usage.
+  * **System Information:** Detailed information about the server OS, PHP version, user, IP addresses, and disabled PHP functions.
+  * **Mobile Friendly:** The interface is fully responsive and usable on mobile devices.
 
-### Processes
-- View running processes using `ps aux` (or equivalent for your OS).
-- Refresh process list on demand.
+### **File Management**
 
-### Network Tools
-- **Port Scanner**: Scan specified ports on a host to check if they are open or closed.
-- **Network Info**: Retrieve interface details (`ip addr` or `ifconfig`) and active connections (`netstat` or `sockstat`).
+  * **AJAX-driven File Manager:** Browse directories, view file details, and navigate the filesystem without page reloads.
+  * **Full CRUD Operations:** Create, Delete, Rename files and directories.
+  * **Advanced File Editor:** An in-browser editor powered by **CodeMirror** with syntax highlighting for various languages.
+  * **File Upload/Download:** Easily upload multiple files directly to the current directory or download files from the server.
+  * **Mass Uploader:** Upload a single file to multiple selected directories at once using a directory tree browser.
+  * **Permissions Management:** View permissions in both octal (`0755`) and symbolic (`drwxr-xr-x`) formats. Change file permissions directly.
+  * **Archiving:** Create ZIP archives from files/directories and extract ZIP archives on the server.
 
-### PHP Evaluator
-- Execute arbitrary PHP code (if `eval` is enabled on the server).
-- View output in a formatted console.
+### **Execution & Control**
 
-### Mass Uploader
-- Upload a single file to multiple directories selected via an interactive directory tree.
+  * **Interactive Terminal:** A pseudo-terminal for executing shell commands, with command history support.
+  * **PHP Code Evaluator:** Run PHP code on the fly and see the output immediately.
+  * **Process Manager:** View a list of all running processes on the server (`ps aux`).
 
-### Security Auditing
-- Scan for SUID/GUID files to identify potential security risks.
-- Retrieve detailed network interface and connection information.
+### **Networking & Security**
 
-### Wget & System
-- Download files from URLs directly to the server.
-- View PHP configuration via `phpinfo()`.
-- Use the self-destruct feature to permanently remove the shell.
+  * **Back Connect / Reverse Shell:** Easily establish a reverse shell connection to a listener for deeper interaction.
+  * **Port Scanner:** A simple TCP port scanner to probe for open ports on a given host.
+  * **Network Information:** View network interface details (`ip addr`/`ifconfig`) and active connections (`netstat`).
+  * **SUID/GUID Scanner:** A security auditing tool to find files with potentially exploitable SUID/GUID permissions for privilege escalation reconnaissance.
+  * **Wget (Downloader):** Fetch files from any URL and save them directly to the server.
+
+### **Database Management**
+
+  * **MySQLi Client:** Connect to a MySQL/MariaDB database and execute SQL queries directly from the shell. View results in a clean, tabulated format.
+
+### **Stealth & Evasion**
+
+  * **Base64 Communication:** All communication between the client and server is Base64 encoded to obscure traffic from basic inspection.
+  * **Self-Destruct:** A one-click function to completely remove the shell script from the server.
+-----
 
 ## Screenshots
 
-<img width="1900" height="992" alt="image" src="https://github.com/user-attachments/assets/ebd64606-f38b-4a6b-8add-b30eed4d544d"/>
-<img width="1918" height="821" alt="image" src="https://github.com/user-attachments/assets/92432cc7-2dd0-42f4-83e6-61eafe11e7e0" />
-<img width="1423" height="754" alt="image" src="https://github.com/user-attachments/assets/4fad8f57-2805-434d-a746-81c8fa946388" />
+<img width="1556" height="789" alt="image" src="https://github.com/user-attachments/assets/77da6b6b-92da-4956-a78b-c9356458aec4" />
+<img width="1901" height="796" alt="image" src="https://github.com/user-attachments/assets/89e95beb-aca3-4e19-b4fa-ed6a33e47b9c" />
 
-## Security Considerations
+## 📄 License
 
-- **Authorized Use Only**: This tool is intended for legal and authorized system administration. Unauthorized access to systems is illegal and unethical.
-- **File Permissions**: Restrict access to the script (e.g., use `.htaccess` or server authentication).
-- **Self-Destruct**: Use the self-destruct feature to remove the shell when no longer needed.
-- **Disabled Functions**: The shell checks for disabled PHP functions and gracefully handles restrictions.
+This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
 
-## Requirements
-
-- **PHP**: Version 7.4 or higher.
-- **Web Server**: Apache, Nginx, or any PHP-compatible server.
-- **Optional PHP Extensions**:
-  - `ZipArchive` for zip/unzip functionality.
-  - `fsockopen` for port scanning.
-- **Browser**: Modern browser with JavaScript enabled.
-- **Dependencies**: CodeMirror (loaded via CDN) for the code editor.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Created by [Joel Indra](https://github.com/joelindra).
-- Inspired by the need for a secure, modern, and feature-rich web shell.
+**Author:** Anonre / [joelindra](https://github.com/joelindra)
