@@ -1,4 +1,4 @@
-# Janus Shell v2.0
+# Janus Shell v2.0 - Anti Logger
 
 <img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
 -----
