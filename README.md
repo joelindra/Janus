@@ -4,10 +4,6 @@ Janus v5.0 is a sophisticated and feature-rich web shell designed for penetratio
 
 <img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
 
-### Features
-
-Janus v5.0 is equipped with a wide array of functionalities, categorized for ease of use:
-
 #### **Core & File Management**
 * **Dashboard:** An overview of the system with live stats on CPU, RAM, and disk usage.
 * **File Manager:** A comprehensive file explorer with capabilities to browse, view, edit, create, rename, delete, and manage permissions of files and directories.
