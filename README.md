@@ -1,3 +1,5 @@
+<img width="1898" height="618" alt="image" src="https://github.com/user-attachments/assets/332d5261-fa0b-49cd-9054-34b0b12ef04e" />
+
 # Janus Web Shell v6.0
 
 <div align="center">
