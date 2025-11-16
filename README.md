@@ -1,4 +1,4 @@
-<img width="1898" height="618" alt="image" src="https://github.com/user-attachments/assets/332d5261-fa0b-49cd-9054-34b0b12ef04e" />
+<img width="1910" height="699" alt="image" src="https://github.com/user-attachments/assets/404a4c07-1564-400f-8e38-a88b5d90f1e5" />
 
 # Janus Web Shell v6.0
 
