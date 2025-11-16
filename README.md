@@ -1,76 +1,330 @@
-## Janus v5.0 - Anti Logger
+# Janus Web Shell v6.0
 
-Janus v5.0 is a sophisticated and feature-rich web shell designed for penetration testers and security professionals. It provides a comprehensive suite of tools for post-exploitation, privilege escalation, and network reconnaissance, all accessible through a modern and intuitive web interface.
+<div align="center">
 
-<img width="364" height="437" alt="image" src="https://github.com/user-attachments/assets/54b12362-b54b-4f3c-be7a-e49fe1cdbd29" />
+![Version](https://img.shields.io/badge/version-6.0-blue.svg)
+![PHP](https://img.shields.io/badge/PHP-7.0%2B-purple.svg)
+![License](https://img.shields.io/badge/license-Authorized%20Use%20Only-red.svg)
 
-#### **Core & File Management**
-* **Dashboard:** An overview of the system with live stats on CPU, RAM, and disk usage.
-* **File Manager:** A comprehensive file explorer with capabilities to browse, view, edit, create, rename, delete, and manage permissions of files and directories.
-* **Uploader:** Upload single or multiple files to the target server.
-* **Mass Uploader:** Upload a single file to multiple directories simultaneously.
-* **Zipper/Unzipper:** Create and extract zip archives.
-* **Self-Destruct:** Remove the web shell from the server with a single click.
+**Advanced PHP Web Shell with Modern UI and Advanced Security Features**
 
-#### **Command & Control**
-* **Terminal:** An interactive terminal for executing system commands.
-* **PHP Eval:** Execute arbitrary PHP code on the server.
-* **Reverse Shell:** Establish a reverse shell connection to a specified IP and port.
-* **Bind Shell:** Create a bind shell on the server for remote access.
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Documentation](#-documentation) • [Warning](#-warning)
 
-#### **Reconnaissance & Enumeration**
-* **Domain Intel:** Gather intelligence on the server's domain, including DNS records, other sites on the same server, and common subdomains.
-* **Port Scanner:** Scan for open ports on a given host.
-* **SUID/GUID Finder:** Locate files with SUID/GUID permissions for potential privilege escalation.
-* **User & Group Enumeration:** List all users and groups on the system.
-* **Kernel Info:** Display detailed information about the server's kernel and operating system.
-* **Config Grabber:** Automatically search for and display common configuration files.
-* **Server Fingerprint:** Gather detailed information about the server's software, services, and packages.
-* **Find Writable Files/Dirs:** Locate world-writable files and directories.
+</div>
 
-#### **Privilege Escalation & Post-Exploitation**
-* **Privilege Escalation Checker:** Run automated checks for common privilege escalation vectors on both Linux and Windows.
-* **Credential Harvester:** Search for credentials, API keys, and private keys within a directory.
-* **Log Cleaner:** Remove specific lines from log files to cover tracks.
-* **Sudo Check:** Check the current user's sudo permissions.
-* **SSH Manager:** View and add SSH keys to the `authorized_keys` file for persistent access.
-* **WordPress Admin Creator:** Create a new WordPress administrator user by providing the path to `wp-config.php`.
-* **cPanel Credential Finder:** Search for cPanel credential files.
-* **Symlink cPanel:** Attempt to read config files of other users on a shared hosting environment via symbolic links.
+---
 
-#### **Network & Pivoting**
-* **Subnet Scanner:** Scan an internal network range to discover live hosts and open ports.
-* **Port Forwarder:** Forward a local port to a remote host and port, enabling access to internal services.
-* **Firewall Control:** View and flush firewall rules (iptables).
-* **Wget:** Download files from a specified URL.
+## 📋 Description
 
-#### **Attack & Evasion**
-* **Phishing Page Deployer:** Deploy a generic admin login phishing page.
-* **Timestomp:** Change the timestamp of a file to match another file, helping to evade detection.
-* **Code Injector:** Inject custom PHP code into existing files.
-* **Backdoor Installer:** Inject a simple `shell_exec` backdoor into specified files.
-* **CPU Hog:** Run an intensive process to consume CPU resources, potentially causing a denial of service.
-* **Keylogger (Experimental):** Attach to a running process and capture read/write syscalls.
+**Janus** is a sophisticated PHP web shell designed for authorized system administration and penetration testing. It features a modern, intuitive web interface with comprehensive security features, anti-delete protection, and advanced WAF bypass capabilities.
 
-#### **Data Management & Exfiltration**
-* **Database Client:** A MySQLi client to execute queries on the server's database.
-* **Data Exfiltration Packager:** Create a downloadable ZIP archive of selected files and directories.
-* **Exfiltrate via Pastebin:** Upload the content of a file to a public pastebin service.
-* **Sensitive File Finder:** Scan a directory for files containing sensitive data or with sensitive extensions.
-* **Change Monitor:** Monitor a directory for a specified duration and report any file changes.
+### Key Highlights
 
-## Disclaimer
+- 🎨 **Modern UI** - Beautiful dark-themed interface with responsive design
+- 🛡️ **Auto-Defend** - Multi-layer protection system with auto-restore
+- 🔒 **Anti-Delete** - Advanced backup and watchdog system
+- 🌐 **Network Tools** - Port scanning, reverse/bind shells, port forwarding
+- 🗄️ **Database Management** - MySQL support with query execution
+- 🔍 **Discovery Tools** - File search, credential harvesting, domain intelligence
+- 🚀 **80+ Features** - Comprehensive toolset for system administration
 
-This tool is provided for educational and authorized security testing purposes only. Unauthorized use of this tool to access systems without permission is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this tool. By using this software, you agree to use it responsibly and in compliance with all applicable laws.
+---
 
-## Screenshot
+## ⚠️ WARNING
 
-<img width="1606" height="898" alt="image" src="https://github.com/user-attachments/assets/1c60f8db-b882-4eed-83a1-d4280f69fbf3" />
-<img width="1675" height="903" alt="image" src="https://github.com/user-attachments/assets/a0532bce-5c14-4286-b91a-ee10287f02bd" />
-<img width="1251" height="880" alt="image" src="https://github.com/user-attachments/assets/74b6dce7-f2cc-4d83-b06d-5b00e7630174" />
+> **This software is intended ONLY for authorized use.**
+> 
+> Unauthorized access to computer systems is illegal and may result in severe legal consequences. Users are solely responsible for ensuring they have proper authorization before using this tool. The authors and contributors are not responsible for any misuse or damage caused by this software.
 
-## License
+---
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🎯 Features
 
-**Remember: With great power comes great responsibility. The developers are not responsible for any misuse or illegal activities conducted with this tool.**
+### Core Features
+
+- **🛡️ Auto-Defend & Anti-Delete Protection**
+  - Multi-layer protection system
+  - Auto-restore mechanism
+  - Real-time monitoring
+  - Command blocking
+
+- **📁 File Management**
+  - Advanced file browser with syntax highlighting
+  - File editor with CodeMirror integration
+  - Mass upload/download
+  - Archive operations (zip/unzip)
+
+- **💻 Command Execution**
+  - Multiple execution methods with fallback
+  - PHP eval support
+  - Interactive terminal interface
+  - Command chaining support
+
+- **🌐 Network Tools**
+  - Port scanner
+  - Reverse/Bind shell
+  - Port forwarding
+  - C2 communication
+  - Remote file download (wget)
+
+- **🗄️ Database Management**
+  - MySQL query execution
+  - Database/column dumper
+  - WordPress user creation
+  - Config file finder
+
+- **📊 System Information**
+  - Real-time system stats (CPU, RAM, Disk)
+  - System profiler
+  - Process manager
+  - User/group management
+
+- **🔒 Security & Stealth**
+  - WAF bypass testing
+  - Advanced log cleaner
+  - Stealth features
+  - Timestomp
+
+- **🔄 Persistence & Recovery**
+  - Enhanced persistence (cron/htaccess)
+  - Multi-location backup
+  - Auto-restore system
+
+- **🎯 Multi-Shell Management**
+  - Shell registry
+  - Command broadcasting
+  - Remote shell support
+
+- **🔐 Encryption & Encoding**
+  - HADES multi-layer encryption
+  - WAF evasion encoding
+  - Code obfuscator
+  - File encryption/decryption
+
+- **🔍 Search & Discovery**
+  - File/content search
+  - Credential harvester
+  - Domain intelligence
+  - SUID/GUID finder
+
+- **⚙️ System Administration**
+  - Cron management
+  - SSH key manager
+  - Firewall control
+  - Sudo checker
+
+- **💉 Code Injection & Backdoors**
+  - Code injection
+  - Backdoor installer
+  - Web shell generator/lister
+
+- **🚀 Advanced Features**
+  - Privilege escalation checker
+  - Subnet scanner
+  - Exploit suggester
+  - Data exfiltration
+  - Memory dump analysis
+  - DNS tunneling
+  - Password cracking
+  - Ransom creator/decryptor
+  - Phishing page deployer
+  - And many more...
+
+---
+
+## 📦 Installation
+
+### Requirements
+
+- PHP 7.0 or higher
+- Web server (Apache/Nginx)
+- Write permissions in target directory
+
+### Quick Start
+
+1. **Upload the file**
+   ```bash
+   # Upload janus.php to your target server
+   chmod 644 janus.php
+   ```
+
+2. **Access the shell**
+   ```
+   http://your-server/janus.php
+   ```
+
+3. **First-time setup**
+   - Shell will automatically setup protection on first access
+   - Secret token will be generated and stored
+   - Backup and watchdog files will be created
+
+---
+
+## 🚀 Usage
+
+### Basic Operations
+
+#### File Management
+- Navigate directories using the File Manager
+- Edit files with syntax highlighting
+- Upload/download files
+- Create/delete files and directories
+
+#### Command Execution
+- Execute system commands via Terminal
+- Run PHP code directly with PHP Eval
+- View real-time output
+
+#### Network Operations
+- Scan ports on target hosts
+- Establish reverse/bind shells
+- Forward ports for tunneling
+- Download files from remote URLs
+
+#### Database Operations
+- Connect to MySQL databases
+- Execute SQL queries
+- Dump databases/tables
+- Create WordPress admin users
+
+### Advanced Features
+
+See [Complete Documentation](JANUS_DOCUMENTATION.md) for detailed usage instructions for all 80+ features.
+
+---
+
+## 📚 Documentation
+
+For complete documentation, see [JANUS_DOCUMENTATION.md](JANUS_DOCUMENTATION.md)
+
+The documentation includes:
+- Detailed feature descriptions
+- Usage guides for all features
+- Configuration options
+- API reference
+- Troubleshooting guide
+
+---
+
+## 🛡️ Security Features
+
+### Auto-Defend System
+- `.htaccess` protection with secret token
+- PHP-based fallback for Nginx
+- Auto-restore redirect mechanism
+
+### Anti-Delete Protection
+- Multiple backup locations
+- Watchdog system for auto-restore
+- Real-time monitoring
+- Command blocking
+
+### WAF Evasion
+- Multiple encoding methods
+- Case variation
+- Comment injection
+- Whitespace manipulation
+- String concatenation
+
+---
+
+## 📡 API
+
+Janus uses an action-based API system. All requests are sent via POST with an `action` parameter.
+
+### Example Request
+
+```javascript
+{
+    action: 'browse',
+    path: '/var/www/html'
+}
+```
+
+### Available Actions
+
+- File Management: `browse`, `get_file_content`, `save_file`, `delete`, `create`, `rename`, `chmod`, `zip`, `unzip`
+- Command Execution: `exec`, `php_eval`
+- Network: `port_scan`, `reverse_shell`, `bind_shell`, `wget`, `c2_communicate`
+- Database: `database_query`, `database_dumper`, `column_dumper`
+- System: `get_live_stats`, `system_profiler`, `get_users_groups`, `get_kernel_info`
+- Security: `waf_bypass_test`, `log_cleaner`, `advanced_log_cleaner`
+- Advanced: `multi_shell_register`, `enhanced_persistence_install`, `multi_location_backup`
+
+See [Complete Documentation](JANUS_DOCUMENTATION.md) for full API reference.
+
+---
+
+## 🐛 Troubleshooting
+
+### Shell Cannot Be Accessed
+- Check file permissions: `chmod 644 janus.php`
+- Check `.htaccess` restrictions
+- Use secret token: `?janus_token=SECRET_TOKEN`
+- Verify PHP functions are not disabled
+
+### Command Execution Failed
+- Shell automatically falls back to alternative execution methods
+- Check `disable_functions` in php.ini
+- Verify user permissions
+
+### Auto-Defend Not Working
+- Ensure server supports `.htaccess` (Apache) or use PHP-based protection (Nginx)
+- Check write permissions in directory
+
+---
+
+## 📝 Important Notes
+
+1. **Password Protection**: Change default password after first access
+2. **Auto-Defend**: Enabled automatically on first access
+3. **Anti-Delete**: Active by default with auto-restore
+4. **WAF Evasion**: Multiple techniques available, no 100% guarantee
+5. **Logging**: Some features may leave traces - use log cleaner
+6. **Persistence**: Can be detected by security tools - use with caution
+
+---
+
+## 🔄 Updates
+
+### Version History
+
+- **v6.0** - Current version with enhanced WAF evasion and bug fixes
+  - Enhanced auto-defend system
+  - Improved anti-delete protection
+  - Advanced features suite
+  - Modern UI improvements
+
+---
+
+## 📚 Reference
+
+### Main Functions
+
+- `setup_auto_defend($shell_path)` - Setup auto-defend protection
+- `setup_anti_delete($shell_path)` - Setup anti-delete protection
+- `hades_encrypt($data, $password)` - Multi-layer encryption
+- `waf_evade_encode($data, $method)` - WAF evasion encoding
+- `execute_command($cmd)` - Command execution with fallback
+
+---
+
+## ⚖️ License & Disclaimer
+
+This software is provided for **educational and authorized use only**. 
+
+**IMPORTANT**: 
+- Unauthorized access to computer systems is illegal
+- Users are fully responsible for their actions
+- Authors are not liable for misuse
+- Use only on systems you own or have explicit permission to test
+
+---
+
+## 👤 Author
+
+**Joel Indra**
+
+- GitHub: [@joelindra](https://github.com/joelindra)
+
+---
