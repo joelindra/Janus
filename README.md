@@ -2,6 +2,8 @@
 
 # Janus Web Shell v6.1
 
+<img width="1982" height="822" alt="image" src="https://github.com/user-attachments/assets/9b40e8e7-cc59-422d-b74f-38abd531dcf0" />
+
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-6.1-blue.svg)
